@@ -1,4 +1,4 @@
-﻿The MIT License (MIT)
+AntiSQLi Library - MIT License (MIT)
 
 Copyright (c) 2013 LOCKBOX LLC, Security Innovation, Inc.
 
