@@ -35,11 +35,15 @@
 
 <p>
 The AntiSQLi library is a free and easy to use library for reducing risk from SQL injection (SQLi) attacks.
-It auto-parameterizes untrusted data for you and best of all uses coding patterns and classes that you're already familiar with.</p>
+It auto-parameterizes untrusted data for you and best of all uses coding patterns and classes that you're already familiar with. The AntiSQLi library saves you time and frustration, and lets you focus more on building your application.</p>
 
-<pre><code>SqlParameterizedQuery pQuery = new SqlParameterizedQuery();
+<p>Integrating the AntiSQLi library takes a couple lines of code and is as easy as the following:</p>
+
+<pre><code>// Automatically assign and parameterize untrusted data
+SqlParameterizedQuery pQuery = new SqlParameterizedQuery();
 pQuery.LoadQuery("SELECT * FROM Users WHERE UserName = {0}",UntrustedData);
 ...
+// You're done, execute your SQL statement
 pQuery.Connection = new SqlConnection("<your connection string>");
 pQuery.Command.ExecuteNonQuery();
 </code></pre>
@@ -58,6 +62,7 @@ pQuery.Command.ExecuteNonQuery();
 
 <p>The AntiSQLi library is made available under the <a href="http://opensource.org/licenses/MIT">MIT License</a>.</p>
 
+<hr/>
 
 <h3>Stay Up to Date with Security Innovation Team Mentor</h3>
 
@@ -65,8 +70,9 @@ pQuery.Command.ExecuteNonQuery();
 
 <h3>Stay Protected on the Cloud with IronCloud</h3>
 
-<p>If</p>
+<p>If you're exchanging highly sensitive information with your customers, check out the IronBox <a href="http://www.goironcloud.com"></a>secure file transfer</a> solution. It's as easy to use as clicking a link and there's no software or extra hardware to install. So no more confusing your team members and customers with complicated tools. Or unnecessary IT support costs and personal frustration.</p>
 
+<p>Or if you're using popular services like DropBox, Google Drive, Microsoft Skydrive or Box.net to store sensitive, we've got some <a href="http://www.goironcloud.com">free data protection tools</a> for you.</p>
 
       </section>
     </div>
