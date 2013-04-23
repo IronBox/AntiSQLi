@@ -39,7 +39,8 @@ It auto-parameterizes untrusted data for you. And it uses coding patterns and cl
 
 <p>Integrating the AntiSQLi library only takes a couple lines of code:</p>
 
-<pre><code>using IronCloud.AntiSQLi;
+<pre><code>// Reference the AntiSQLi library
+using IronCloud.AntiSQLi;
 ...
 
 // Automatically assign and parameterize untrusted data
@@ -47,8 +48,9 @@ SqlParameterizedQuery pQuery = new SqlParameterizedQuery();
 pQuery.LoadQuery("SELECT * FROM Users WHERE UserName = {0}",UntrustedData);
 ...
 
-// You're done, execute your SQL statement
+// You're done, execute your SQL statement using familiar methods
 pQuery.Connection = new SqlConnection("<your connection string>");
+pQuery.Connection.Open();
 pQuery.Command.ExecuteNonQuery();
 </code></pre>
 
