@@ -19,7 +19,7 @@
           <a id="forkme_banner" href="https://github.com/IronCloud/AntiSQLi">View on GitHub</a>
 
           <h1 id="project_title">AntiSQLi Library</h1>
-          <h2 id="project_tagline">A simple, easy to use library for mitigating risk from SQL injection (SQLi) attacks from the application security experts at <a href="http://www.goironcloud.com">IronCloud</a> and <a href="http://www.securityinnovation.com">Security Innovation, Inc.</a></h2>
+          <h2 id="project_tagline">A free and easy to use library for mitigating risk from SQL injection (SQLi) attacks from the application security experts at <a href="http://www.goironcloud.com">IronCloud</a> and <a href="http://www.securityinnovation.com">Security Innovation, Inc.</a></h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/IronCloud/AntiSQLi/zipball/master">Download this project as a .zip file</a>
@@ -31,13 +31,16 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
+        <h3>Welcome to the AntiSQLi GitHub Page.</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>The AntiSQLi library is a free and easy to use library for reducing risk from SQL injection (SQLi) attacks, the current #1 Internet attack today. It auto-parameterizes untrusted data for you and best of all uses coding patterns and classes that you're already familiar with.</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<pre><code>
+SqlParameterizedQuery pQuery = new SqlParameterizedQuery();
+pQuery.LoadQuery("SELECT * FROM Users WHERE UserName = {0} AND Email = {1}",UntrustedDataUserName, UntrustedDataEmail);
+...
+pQuery.Connection = new SqlConnection("<your connection string>");
+pQuery.Command.ExecuteNonQuery();
 </code></pre>
 
 <p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
@@ -46,7 +49,7 @@ $ git checkout gh-pages
 
 <p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
 
-<h3>Rather Drive Stick?</h3>
+<h3>Get it on NuGet</h3>
 
 <p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
 
@@ -54,9 +57,9 @@ $ git checkout gh-pages
 
 <p>The AntiSQLi library was developed by IronCloud (<a href="https://github.com/ironcloud" class="user-mention">@ironcloud</a>) and Security Innovation, Inc. (<a href="https://github.com/securityinnovation" class="user-mention">@securityinnovation</a>).</p>
 
-<h3>Support or Contact</h3>
+<h3>License</h3>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>The AntiSQLi library is made available under the <a href="http://opensource.org/licenses/MIT">MIT License</a>.</p>
       </section>
     </div>
 
