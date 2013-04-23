@@ -37,12 +37,16 @@
 The AntiSQLi library is a free and easy to use library for reducing risk from SQL injection (SQLi) attacks.
 It auto-parameterizes untrusted data for you. And it uses coding patterns and classes that you're already familiar with. The AntiSQLi library saves you time and frustration, and lets you focus more on building your application.</p>
 
-<p>Integrating the AntiSQLi library takes a couple lines of code and is as easy as the following:</p>
+<p>Integrating the AntiSQLi library only takes a couple lines of code:</p>
 
-<pre><code>// Automatically assign and parameterize untrusted data
+<pre><code>using IronCloud.AntiSQLi;
+...
+
+// Automatically assign and parameterize untrusted data
 SqlParameterizedQuery pQuery = new SqlParameterizedQuery();
 pQuery.LoadQuery("SELECT * FROM Users WHERE UserName = {0}",UntrustedData);
 ...
+
 // You're done, execute your SQL statement
 pQuery.Connection = new SqlConnection("<your connection string>");
 pQuery.Command.ExecuteNonQuery();
