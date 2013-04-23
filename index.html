@@ -33,25 +33,22 @@
       <section id="main_content" class="inner">
         <h3>Welcome to the AntiSQLi GitHub Page.</h3>
 
-<p>The AntiSQLi library is a free and easy to use library for reducing risk from SQL injection (SQLi) attacks, the current #1 Internet attack today. It auto-parameterizes untrusted data for you and best of all uses coding patterns and classes that you're already familiar with.</p>
+<p>
+The AntiSQLi library is a free and easy to use library for reducing risk from SQL injection (SQLi) attacks.
+It auto-parameterizes untrusted data for you and best of all uses coding patterns and classes that you're already familiar with.</p>
 
-<pre><code>
-SqlParameterizedQuery pQuery = new SqlParameterizedQuery();
-pQuery.LoadQuery("SELECT * FROM Users WHERE UserName = {0} AND Email = {1}",UntrustedDataUserName, UntrustedDataEmail);
+<pre><code>SqlParameterizedQuery pQuery = new SqlParameterizedQuery();
+pQuery.LoadQuery("SELECT * FROM Users WHERE UserName = {0}",UntrustedData);
 ...
 pQuery.Connection = new SqlConnection("<your connection string>");
 pQuery.Command.ExecuteNonQuery();
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>The AntiSQLi library is also highly extensible. We've written .NET classes for Microsoft SQL Server and Microsoft SQL Server Compact Edition, but you can easily extend the library to support other database platforms like Oracle and MySQL.</p>
 
 <h3>Get it on NuGet</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>We're currently creating an AntiSQLi package that you can from NuGet, stay tuned.</p>
 
 <h3>Authors and Contributors</h3>
 
@@ -60,6 +57,17 @@ pQuery.Command.ExecuteNonQuery();
 <h3>License</h3>
 
 <p>The AntiSQLi library is made available under the <a href="http://opensource.org/licenses/MIT">MIT License</a>.</p>
+
+
+<h3>Stay Up to Date with Security Innovation Team Mentor</h3>
+
+<p>_SI_TeamMentor_Blurb__</p>
+
+<h3>Stay Protected on the Cloud with IronCloud</h3>
+
+<p>If</p>
+
+
       </section>
     </div>
 
