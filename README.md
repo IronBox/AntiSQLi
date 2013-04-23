@@ -1,4 +1,4 @@
 AntiSQLi
 ========
 
-A simple, easy to use and free .NET library for mitigating risk from SQL injection (SQLi) attacks
+A simple, easy to use and free library for reducing risk from SQL injection (SQLi) attacks
