@@ -49,7 +49,7 @@ pQuery.LoadQuery("SELECT * FROM Users WHERE UserName = {0}",UntrustedData);
 ...
 
 // You're done, execute your SQL statement using familiar methods
-pQuery.Connection = new SqlConnection("<your connection string>");
+pQuery.Connection = new SqlConnection("[your connection string]");
 pQuery.Connection.Open();
 pQuery.Command.ExecuteNonQuery();
 </code></pre>
