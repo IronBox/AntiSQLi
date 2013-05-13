@@ -8,8 +8,8 @@
     <ProjectGuid>{BE2F62D3-232F-4F10-8C74-68ACCAEDECBA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IronCloud.AntiSQLi</RootNamespace>
-    <AssemblyName>IronCloud.AntiSQLi</AssemblyName>
+    <RootNamespace>IronBox.AntiSQLi</RootNamespace>
+    <AssemblyName>IronBox.AntiSQLi</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

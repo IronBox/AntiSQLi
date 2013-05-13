@@ -6,7 +6,7 @@ using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
 
-namespace IronCloud.AntiSQLi.Common
+namespace IronBox.AntiSQLi.Common
 {
     public class AntiSQLiCommon
     {
@@ -37,7 +37,7 @@ namespace IronCloud.AntiSQLi.Common
             // to proceed
             if (ParsedParameters.Length == 0)
             {
-                throw new AntiSQLiException("There were no parameters specified, it may not be safe to proceed");
+                throw new AntiSQLiException("There were no parameters parsed, it may not be safe to proceed");
             }
 
             // Substitute the QueryText formmatters with the parameter names
@@ -53,7 +53,6 @@ namespace IronCloud.AntiSQLi.Common
             DbCommandObj.CommandType = CommandType.Text;
             DbCommandObj.Parameters.Clear();
             DbCommandObj.Parameters.AddRange(ParsedParameters);
-
         }
 
 

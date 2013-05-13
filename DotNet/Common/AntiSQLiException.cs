@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace IronCloud.AntiSQLi.Common
+namespace IronBox.AntiSQLi.Common
 {
     public class AntiSQLiException : Exception
     {

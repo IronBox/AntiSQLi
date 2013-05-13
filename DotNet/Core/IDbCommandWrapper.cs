@@ -5,9 +5,9 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Data;
 using System.Data.Common;
-using IronCloud.AntiSQLi.Common;
+using IronBox.AntiSQLi.Common;
 
-namespace IronCloud.AntiSQLi.Core
+namespace IronBox.AntiSQLi.Core
 {
     public interface IDbCommandWrapper<TCommand, TParameter, TConnection, TDataReader>
     {
@@ -19,6 +19,7 @@ namespace IronCloud.AntiSQLi.Core
 
         // Safe query loading methods
         bool LoadQueryText(String QueryText, params Object[] args);
+        bool LoadQueryTextNoParameters(String QueryText);
 
         // Internal connection/command objects
         TConnection Connection { get; set; }

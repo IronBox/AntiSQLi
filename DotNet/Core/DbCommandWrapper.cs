@@ -5,9 +5,9 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Data;
 using System.Data.Common;
-using IronCloud.AntiSQLi.Common;
+using IronBox.AntiSQLi.Common;
 
-namespace IronCloud.AntiSQLi.Core
+namespace IronBox.AntiSQLi.Core
 {
     public class DbCommandWrapper<TCommand, TParameter, TConnection, TDataReader> : IDbCommandWrapper<TCommand, TParameter, TConnection, TDataReader>
         where TCommand : DbCommand, new()
@@ -256,6 +256,40 @@ namespace IronCloud.AntiSQLi.Core
             {
                 return (false);
             }
+        }
+
+
+        //---------------------------------------------------------------------
+        /// <summary>
+        ///     Loads the given query text with no parameters
+        /// </summary>
+        /// <param name="QueryText"></param>
+        /// <returns></returns>
+        //---------------------------------------------------------------------
+        public bool LoadQueryTextNoParameters(String QueryText)
+        {
+            try
+            {
+                // Basic input validation, add any additional checks below 
+                // before query text assignment to command object
+                if (String.IsNullOrEmpty(QueryText))
+                {
+                    throw new ArgumentException();
+                }
+
+                // Add any additional/custom checks here ...
+                //
+
+                // Assign the query to the internal command object
+                SqlCommandObject.CommandText = QueryText;
+                SqlCommandObject.CommandType = CommandType.Text;
+                return (true);
+            }
+            catch (Exception e)
+            {
+                return (false);
+            }
+
         }
     }
 }

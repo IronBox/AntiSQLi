@@ -5,10 +5,10 @@ using System.Text;
 using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
-using IronCloud.AntiSQLi.Common;
-using IronCloud.AntiSQLi.Core;
+using IronBox.AntiSQLi.Common;
+using IronBox.AntiSQLi.Core;
 
-namespace IronCloud.AntiSQLi.SqlClient
+namespace IronBox.AntiSQLi.SqlClient
 {
     public class SqlParameterizedQuery : DbCommandWrapper<SqlCommand,SqlParameter,SqlConnection, SqlDataReader>
     {

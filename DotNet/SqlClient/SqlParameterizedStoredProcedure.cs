@@ -4,9 +4,9 @@ using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 
-using IronCloud.AntiSQLi.Core;
+using IronBox.AntiSQLi.Core;
 
-namespace IronCloud.AntiSQLi.SqlClient
+namespace IronBox.AntiSQLi.SqlClient
 {
     //-------------------------------------------------------------------------
     /// <summary>
