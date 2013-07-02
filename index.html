@@ -4,9 +4,9 @@
   <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="AntiSQLi Library : A simple, easy to use library for mitigating risk from SQL injection (SQLi) attacks" />
+    <meta name="description" content="AntiSQLi Library : A simple, easy to use library for mitigating risk from SQL injection (SQLi) attacks from the application security experts at IronBox and Security Innovation, Inc." />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/AntiSQLi/stylesheets/stylesheet.css">
 
     <title>AntiSQLi Library</title>
   </head>
@@ -16,14 +16,14 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/IronCloud/AntiSQLi">View on GitHub</a>
+          <a id="forkme_banner" href="https://github.com/IronBox/AntiSQLi">View on GitHub</a>
 
-          <h1 id="project_title">AntiSQLi Library</h1>
-          <h2 id="project_tagline">A simple, easy to use library for mitigating risk from SQL injection (SQLi) attacks</h2>
+          <h1 id="project_title">AntiSQLi Library [BETA]</h1>
+          <h2 id="project_tagline">A free and easy to use library for mitigating risk from SQL injection (SQLi) attacks from the application security experts at <a href="http://www.golockbox.com">IronBox</a> and <a href="http://www.securityinnovation.com">Security Innovation, Inc.</a></h2>
 
             <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/IronCloud/AntiSQLi/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/IronCloud/AntiSQLi/tarball/master">Download this project as a tar.gz file</a>
+              <a class="zip_download_link" href="https://github.com/IronBox/AntiSQLi/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/IronBox/AntiSQLi/tarball/master">Download this project as a tar.gz file</a>
             </section>
         </header>
     </div>
@@ -31,39 +31,62 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
+        <h3>Welcome to the AntiSQLi GitHub Page.</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>
+The AntiSQLi library is a free and easy to use library for reducing risk from SQL injection (SQLi) attacks -- one of the most common application attacks today.
+</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<p>The AntiSQLi library auto-parameterizes untrusted data for you. And it uses coding patterns and classes that you're already familiar with. The AntiSQLi library saves you time and frustration, and lets you focus more on building your application.</p>
+
+<p>Integrating the AntiSQLi library is easy and only takes a couple lines of code. In fact, it takes less code to use the AntiSQLi library than typical coding patterns. Here's a .NET Framework example:</p>
+
+<pre><code>// Reference the AntiSQLi library
+using IronBox.AntiSQLi;
+...
+
+// Automatically assign and parameterize untrusted data
+SqlParameterizedQuery pQuery = new SqlParameterizedQuery();
+pQuery.LoadQuery("SELECT * FROM Users WHERE UserName = {0}",UntrustedData);
+...
+
+// You're done, execute your SQL statement using familiar methods
+pQuery.Connection = new SqlConnection("[your connection string]");
+pQuery.Connection.Open();
+pQuery.Command.ExecuteNonQuery();
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>The AntiSQLi library is also highly extensible. We've written .NET classes for Microsoft SQL Server and Microsoft SQL Server Compact Edition, but you can easily extend the library to support other database platforms like Oracle and MySQL.</p>
 
-<h3>Designer Templates</h3>
+<h3>Get AntiSQLi on NuGet</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>If you'd prefer to use a pre-built version of AntiSQLi, soon you will be able to get it from NuGet.  Stay tuned.</p>
 
 <h3>Authors and Contributors</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>The AntiSQLi library was developed by the IronBox team (<a href="https://github.com/ironbox" class="user-mention">@ironbox</a>) and Security Innovation, Inc. (<a href="https://github.com/securityinnovation" class="user-mention">@securityinnovation</a>).</p>
 
-<h3>Support or Contact</h3>
+<h3>License</h3>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>The AntiSQLi library is made available under the <a href="http://opensource.org/licenses/BSD-3-Clause">BSD License</a>.</p>
+
+<hr/>
+
+<h3>Reduce Your Application Security Risk with Security Innovation</h3>
+
+<p>Security Innovation focuses on the most difficult IT Security problem, and the root cause of most data breaches – insecure applications. Our solutions are based on the three pillars of a secure SDLC, which feed into one another to create an ecosystem of repeatable, secure software development: <a href="https://www.securityinnovation.com/solutions/standards-and-process.html">Standards</a>, <a href="https://www.securityinnovation.com/solutions/education.html">Education</a> and <a href="https://www.securityinnovation.com/solutions/assessment.html">Assessment</a></p>
+
+<h3>Use the Cloud Securely with IronBox</h3>
+
+<p>If you're exchanging highly sensitive information with your customers, check out the IronBox <a href="http://www.golockbox.com">secure file transfer</a> solution. It's as easy to use as clicking a link and there's no software or extra hardware to install. So no more confusing your team members and customers with complicated tools. Or unnecessary IT support costs and personal frustration.</p>
+
       </section>
     </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">AntiSQLi Library maintained by <a href="https://github.com/IronCloud">IronCloud</a></p>
+        <p class="copyright">AntiSQLi Library maintained by <a href="https://github.com/IronBox">IronBox</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
