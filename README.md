@@ -1,4 +1,4 @@
-`This library is now deprecated, please see the new [AntiSQLi library here](https://github.com/IronBox/antisqli-core)`
+# This library is now deprecated, please see the new [AntiSQLi library here](https://github.com/IronBox/antisqli-core)
 
 AntiSQLi [BETA]
 ========
