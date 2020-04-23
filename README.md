@@ -1,4 +1,4 @@
-# This library is now deprecated, please use the new [AntiSQLi library here](https://github.com/IronBox/antisqli-core)
+# This version of the AntiSQLi library is now deprecated, please use the new [AntiSQLi library here](https://github.com/IronBox/antisqli-core)
 
 
 AntiSQLi [BETA]
